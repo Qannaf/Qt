@@ -69,7 +69,6 @@ G:/Utilisateurs/qannaf.as/Desktop/Qannaf/qt/build-helloWidget-Desktop_Qt_6_1_0_M
   C:/Qt6.1.0/6.1.0/mingw81_64/include/QtCore/qutf8stringview.h \
   C:/Qt6.1.0/6.1.0/mingw81_64/include/QtCore/qvarlengtharray.h \
   C:/Qt6.1.0/6.1.0/mingw81_64/include/QtCore/qversiontagging.h \
-  C:/Qt6.1.0/6.1.0/mingw81_64/include/QtGui/QPainter \
   C:/Qt6.1.0/6.1.0/mingw81_64/include/QtGui/qbitmap.h \
   C:/Qt6.1.0/6.1.0/mingw81_64/include/QtGui/qbrush.h \
   C:/Qt6.1.0/6.1.0/mingw81_64/include/QtGui/qcolor.h \
@@ -80,16 +79,13 @@ G:/Utilisateurs/qannaf.as/Desktop/Qannaf/qt/build-helloWidget-Desktop_Qt_6_1_0_M
   C:/Qt6.1.0/6.1.0/mingw81_64/include/QtGui/qimage.h \
   C:/Qt6.1.0/6.1.0/mingw81_64/include/QtGui/qkeysequence.h \
   C:/Qt6.1.0/6.1.0/mingw81_64/include/QtGui/qpaintdevice.h \
-  C:/Qt6.1.0/6.1.0/mingw81_64/include/QtGui/qpainter.h \
   C:/Qt6.1.0/6.1.0/mingw81_64/include/QtGui/qpalette.h \
-  C:/Qt6.1.0/6.1.0/mingw81_64/include/QtGui/qpen.h \
   C:/Qt6.1.0/6.1.0/mingw81_64/include/QtGui/qpixelformat.h \
   C:/Qt6.1.0/6.1.0/mingw81_64/include/QtGui/qpixmap.h \
   C:/Qt6.1.0/6.1.0/mingw81_64/include/QtGui/qpolygon.h \
   C:/Qt6.1.0/6.1.0/mingw81_64/include/QtGui/qregion.h \
   C:/Qt6.1.0/6.1.0/mingw81_64/include/QtGui/qrgb.h \
   C:/Qt6.1.0/6.1.0/mingw81_64/include/QtGui/qrgba64.h \
-  C:/Qt6.1.0/6.1.0/mingw81_64/include/QtGui/qtextoption.h \
   C:/Qt6.1.0/6.1.0/mingw81_64/include/QtGui/qtgui-config.h \
   C:/Qt6.1.0/6.1.0/mingw81_64/include/QtGui/qtguiglobal.h \
   C:/Qt6.1.0/6.1.0/mingw81_64/include/QtGui/qtransform.h \

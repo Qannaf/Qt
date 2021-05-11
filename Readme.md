@@ -610,3 +610,197 @@ void CannonField::paintEvent(QPaintEvent * /* event */)
 
 
 
+## 10
+ * cannonfield.h
+ ``` cpp
+/****************************************************************
+**
+** Qt tutorial 10  cannonfield.h
+**
+****************************************************************/
+ #ifndef CANNONFIELD_H
+ #define CANNONFIELD_H
+
+ #include <QWidget>
+ #include <QPaintEvent>
+ #include <QPainter>
+
+ class CannonField : public QWidget
+ {
+     Q_OBJECT
+
+ public:
+     CannonField(QWidget *parent = 0);
+
+     int angle() const { return currentAngle; }
+     int force() const { return currentForce; }
+
+ public slots:
+     void setAngle(int angle);
+     void setForce(int force);
+
+ signals:
+     void angleChanged(int newAngle);
+     void forceChanged(int newForce);
+
+ protected:
+     void paintEvent(QPaintEvent *event);
+
+ private:
+     QRect cannonRect() const;
+
+     int currentAngle;
+     int currentForce;
+ };
+
+ #endif
+ ```
+ * cannonfield.cpp
+ ``` cpp
+/****************************************************************
+**
+** Qt tutorial 10  cannonfield.cpp
+**
+****************************************************************/
+
+
+ #include "cannonfield.h"
+
+ CannonField::CannonField(QWidget *parent)
+     : QWidget(parent)
+ {
+     currentAngle = 45;
+     currentForce = 0;
+     setPalette(QPalette(QColor(250, 250, 200)));
+     setAutoFillBackground(true);
+ }
+
+ void CannonField::setAngle(int angle)
+ {
+     if (angle < 5)
+         angle = 5;
+     if (angle > 70)
+         angle = 70;
+     if (currentAngle == angle)
+         return;
+     currentAngle = angle;
+     update(cannonRect());
+     emit angleChanged(currentAngle);
+ }
+
+ void CannonField::setForce(int force)
+ {
+     if (force < 0)
+         force = 0;
+     if (currentForce == force)
+         return;
+     currentForce = force;
+     emit forceChanged(currentForce);
+ }
+
+ void CannonField::paintEvent(QPaintEvent * /* event */)
+ {
+     QPainter painter(this);
+
+     painter.setPen(Qt::NoPen);
+     painter.setBrush(Qt::blue);
+
+     painter.translate(0, height());
+     painter.drawPie(QRect(-35, -35, 70, 70), 0, 90 * 16);
+     painter.rotate(-currentAngle);
+     painter.drawRect(QRect(30, -5, 20, 10));
+ }
+
+ QRect CannonField::cannonRect() const
+ {
+     QRect result(0, 0, 50, 50);
+     result.moveBottomLeft(rect().bottomLeft());
+     return result;
+ }
+ ```
+ * Main.cpp
+ ```cpp
+ /****************************************************************
+**
+** Qt tutorial 10
+**
+****************************************************************/
+#include <QApplication>
+ #include <QFont>
+ #include <QGridLayout>
+ #include <QPushButton>
+ #include <QVBoxLayout>
+
+ #include "cannonfield.h"
+ #include "lcdrange.h"
+
+ class MyWidget : public QWidget
+ {
+ public:
+     MyWidget(QWidget *parent = 0);
+ };
+
+ MyWidget::MyWidget(QWidget *parent)
+     : QWidget(parent)
+ {
+     QPushButton *quit = new QPushButton(tr("&Quit"));
+     quit->setFont(QFont("Times", 18, QFont::Bold));
+
+     connect(quit, SIGNAL(clicked()), qApp, SLOT(quit()));
+
+     LCDRange *angle = new LCDRange;
+     angle->setRange(5, 70);
+
+     LCDRange *force = new LCDRange;
+     force->setRange(10, 50);
+
+     CannonField *cannonField = new CannonField;
+
+     connect(angle, SIGNAL(valueChanged(int)),
+             cannonField, SLOT(setAngle(int)));
+     connect(cannonField, SIGNAL(angleChanged(int)),
+             angle, SLOT(setValue(int)));
+
+     connect(force, SIGNAL(valueChanged(int)),
+             cannonField, SLOT(setForce(int)));
+     connect(cannonField, SIGNAL(forceChanged(int)),
+             force, SLOT(setValue(int)));
+
+     QVBoxLayout *leftLayout = new QVBoxLayout;
+     leftLayout->addWidget(angle);
+     leftLayout->addWidget(force);
+
+     QGridLayout *gridLayout = new QGridLayout;
+     gridLayout->addWidget(quit, 0, 0);
+     gridLayout->addLayout(leftLayout, 1, 0);
+     gridLayout->addWidget(cannonField, 1, 1, 2, 1);
+     gridLayout->setColumnStretch(1, 10);
+     setLayout(gridLayout);
+
+     angle->setValue(60);
+     force->setValue(25);
+     angle->setFocus();
+ }
+
+ int main(int argc, char *argv[])
+ {
+     QApplication app(argc, argv);
+     MyWidget widget;
+     widget.setGeometry(100, 100, 500, 355);
+     widget.show();
+     return app.exec();
+ }
+
+ ```
+![alt text](images/10.PNG?raw=true "sortie de code")
+
+## 11 - Giving It a Shot
+![alt text](images/11.PNG?raw=true "sortie de code")
+
+##12 - Facing the Wall
+Look helloWidget folder
+
+
+
+
+

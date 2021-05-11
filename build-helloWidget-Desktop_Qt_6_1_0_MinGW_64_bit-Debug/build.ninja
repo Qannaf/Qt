@@ -83,6 +83,14 @@ build CMakeFiles/helloWidget.dir/cannonfield.cpp.obj: CXX_COMPILER__helloWidget_
   OBJECT_DIR = CMakeFiles\helloWidget.dir
   OBJECT_FILE_DIR = CMakeFiles\helloWidget.dir
 
+build CMakeFiles/helloWidget.dir/gameboard.cpp.obj: CXX_COMPILER__helloWidget_Debug G$:/Utilisateurs/qannaf.as/Desktop/Qannaf/qt/helloWidget/gameboard.cpp || cmake_object_order_depends_target_helloWidget
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_WIN32_WINNT=0x0601 -D_WIN64
+  DEP_FILE = CMakeFiles\helloWidget.dir\gameboard.cpp.obj.d
+  FLAGS = -g -Wno-error=invalid-offsetof -std=gnu++17
+  INCLUDES = -I. -IG:/Utilisateurs/qannaf.as/Desktop/Qannaf/qt/helloWidget -IhelloWidget_autogen/include -isystem C:/Qt6.1.0/6.1.0/mingw81_64/include/QtCore -isystem C:/Qt6.1.0/6.1.0/mingw81_64/include -isystem C:/Qt6.1.0/6.1.0/mingw81_64/mkspecs/win32-g++ -isystem C:/Qt6.1.0/6.1.0/mingw81_64/include/QtWidgets -isystem C:/Qt6.1.0/6.1.0/mingw81_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\helloWidget.dir
+  OBJECT_FILE_DIR = CMakeFiles\helloWidget.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target helloWidget
@@ -91,7 +99,7 @@ build CMakeFiles/helloWidget.dir/cannonfield.cpp.obj: CXX_COMPILER__helloWidget_
 #############################################
 # Link the executable helloWidget.exe
 
-build helloWidget.exe: CXX_EXECUTABLE_LINKER__helloWidget_Debug CMakeFiles/helloWidget.dir/helloWidget_autogen/mocs_compilation.cpp.obj CMakeFiles/helloWidget.dir/main.cpp.obj CMakeFiles/helloWidget.dir/mainwindow.cpp.obj CMakeFiles/helloWidget.dir/lcdrange.cpp.obj CMakeFiles/helloWidget.dir/cannonfield.cpp.obj | C$:/Qt6.1.0/6.1.0/mingw81_64/lib/libQt6Widgets.a C$:/Qt6.1.0/6.1.0/mingw81_64/lib/libQt6Gui.a C$:/Qt6.1.0/6.1.0/mingw81_64/lib/libQt6Core.a || helloWidget_autogen helloWidget_autogen_timestamp_deps
+build helloWidget.exe: CXX_EXECUTABLE_LINKER__helloWidget_Debug CMakeFiles/helloWidget.dir/helloWidget_autogen/mocs_compilation.cpp.obj CMakeFiles/helloWidget.dir/main.cpp.obj CMakeFiles/helloWidget.dir/mainwindow.cpp.obj CMakeFiles/helloWidget.dir/lcdrange.cpp.obj CMakeFiles/helloWidget.dir/cannonfield.cpp.obj CMakeFiles/helloWidget.dir/gameboard.cpp.obj | C$:/Qt6.1.0/6.1.0/mingw81_64/lib/libQt6Widgets.a C$:/Qt6.1.0/6.1.0/mingw81_64/lib/libQt6Gui.a C$:/Qt6.1.0/6.1.0/mingw81_64/lib/libQt6Core.a || helloWidget_autogen helloWidget_autogen_timestamp_deps
   FLAGS = -g
   LINK_LIBRARIES = C:/Qt6.1.0/6.1.0/mingw81_64/lib/libQt6Widgets.a  C:/Qt6.1.0/6.1.0/mingw81_64/lib/libQt6Gui.a  C:/Qt6.1.0/6.1.0/mingw81_64/lib/libQt6Core.a  -lmpr  -luserenv  -ld3d11  -ldxgi  -ldxguid  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\helloWidget.dir
@@ -151,7 +159,7 @@ build helloWidget_autogen/timestamp: CUSTOM_COMMAND C$:/Qt6.1.0/6.1.0/mingw81_64
 #############################################
 # Phony custom command for CMakeFiles\helloWidget_autogen_timestamp_deps
 
-build CMakeFiles/helloWidget_autogen_timestamp_deps: phony C$:/Qt6.1.0/6.1.0/mingw81_64/bin/Qt6Widgets.dll C$:/Qt6.1.0/6.1.0/mingw81_64/bin/Qt6Core.dll C$:/Qt6.1.0/6.1.0/mingw81_64/./bin/uic.exe C$:/Qt6.1.0/6.1.0/mingw81_64/./bin/moc.exe
+build CMakeFiles/helloWidget_autogen_timestamp_deps: phony C$:/Qt6.1.0/6.1.0/mingw81_64/bin/Qt6Widgets.dll C$:/Qt6.1.0/6.1.0/mingw81_64/./bin/moc.exe C$:/Qt6.1.0/6.1.0/mingw81_64/./bin/uic.exe C$:/Qt6.1.0/6.1.0/mingw81_64/bin/Qt6Core.dll
 
 
 #############################################

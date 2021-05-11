@@ -198,6 +198,11 @@
 			"EWIEGA46WW/moc_cannonfield.cpp"
 		],
 		[
+			"G:/Utilisateurs/qannaf.as/Desktop/Qannaf/qt/helloWidget/gameboard.h",
+			"MU",
+			"EWIEGA46WW/moc_gameboard.cpp"
+		],
+		[
 			"G:/Utilisateurs/qannaf.as/Desktop/Qannaf/qt/helloWidget/lcdrange.h",
 			"MU",
 			"EWIEGA46WW/moc_lcdrange.cpp"
@@ -272,6 +277,10 @@
 	[
 		[
 			"G:/Utilisateurs/qannaf.as/Desktop/Qannaf/qt/helloWidget/cannonfield.cpp",
+			"MU"
+		],
+		[
+			"G:/Utilisateurs/qannaf.as/Desktop/Qannaf/qt/helloWidget/gameboard.cpp",
 			"MU"
 		],
 		[

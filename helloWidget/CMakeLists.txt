@@ -38,6 +38,9 @@ set(PROJECT_SOURCES
 		#tutorial 7
             cannonfield.h
             cannonfield.cpp
+            gameboard.h
+            gameboard.cpp
+                #tutorial 12
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

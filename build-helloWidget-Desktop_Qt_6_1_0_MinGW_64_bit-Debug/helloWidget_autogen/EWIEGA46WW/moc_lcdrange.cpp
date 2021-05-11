@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_LCDRange_t {
-    const uint offsetsAndSize[18];
-    char stringdata0[74];
+    const uint offsetsAndSize[22];
+    char stringdata0[87];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(offsetof(qt_meta_stringdata_LCDRange_t, stringdata0) + ofs), len 
@@ -37,12 +37,14 @@ QT_MOC_LITERAL(32, 8), // "setValue"
 QT_MOC_LITERAL(41, 5), // "value"
 QT_MOC_LITERAL(47, 8), // "setRange"
 QT_MOC_LITERAL(56, 8), // "minValue"
-QT_MOC_LITERAL(65, 8) // "maxValue"
+QT_MOC_LITERAL(65, 8), // "maxValue"
+QT_MOC_LITERAL(74, 7), // "setText"
+QT_MOC_LITERAL(82, 4) // "text"
 
     },
     "LCDRange\0valueChanged\0\0newValue\0"
     "setValue\0value\0setRange\0minValue\0"
-    "maxValue"
+    "maxValue\0setText\0text"
 };
 #undef QT_MOC_LITERAL
 
@@ -52,7 +54,7 @@ static const uint qt_meta_data_LCDRange[] = {
        9,       // revision
        0,       // classname
        0,    0, // classinfo
-       3,   14, // methods
+       4,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -60,11 +62,12 @@ static const uint qt_meta_data_LCDRange[] = {
        1,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    1,   32,    2, 0x06,    0 /* Public */,
+       1,    1,   38,    2, 0x06,    0 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       4,    1,   35,    2, 0x0a,    2 /* Public */,
-       6,    2,   38,    2, 0x0a,    4 /* Public */,
+       4,    1,   41,    2, 0x0a,    2 /* Public */,
+       6,    2,   44,    2, 0x0a,    4 /* Public */,
+       9,    1,   49,    2, 0x0a,    7 /* Public */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::Int,    3,
@@ -72,6 +75,7 @@ static const uint qt_meta_data_LCDRange[] = {
  // slots: parameters
     QMetaType::Void, QMetaType::Int,    5,
     QMetaType::Void, QMetaType::Int, QMetaType::Int,    7,    8,
+    QMetaType::Void, QMetaType::QString,   10,
 
        0        // eod
 };
@@ -85,6 +89,7 @@ void LCDRange::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         case 0: _t->valueChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 1: _t->setValue((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 2: _t->setRange((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
+        case 3: _t->setText((*reinterpret_cast< const QString(*)>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -107,7 +112,7 @@ const QMetaObject LCDRange::staticMetaObject = { {
     nullptr,
 qt_incomplete_metaTypeArray<qt_meta_stringdata_LCDRange_t
 , QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>
-, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>
+, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<const QString &, std::false_type>
 
 
 >,
@@ -134,13 +139,13 @@ int LCDRange::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 3)
+        if (_id < 4)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 3;
+        _id -= 4;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 3)
+        if (_id < 4)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 3;
+        _id -= 4;
     }
     return _id;
 }
