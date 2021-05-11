@@ -286,3 +286,301 @@ int main(int argc, char *argv[])
 
  ```
 ![alt text](images/6.PNG?raw=true "sortie de code")
+
+
+
+## 7 - One Thing Leads to Another
+  * lcdrange.h
+```cpp
+/****************************************************************
+**
+** Qt tutorial 7  lcdrange.h
+**
+****************************************************************/
+#ifndef LCDRANGE_H
+#define LCDRANGE_H
+
+#include <QWidget>
+#include <QLCDNumber>
+#include <QSlider>
+#include <QVBoxLayout>
+
+
+class LCDRange : public QWidget
+{
+    Q_OBJECT
+
+public:
+    LCDRange(QWidget *parent = 0);
+
+    int value() const;
+
+public slots:
+    void setValue(int value);
+    void setRange(int minValue, int maxValue);
+
+signals:
+    void valueChanged(int newValue);
+
+private:
+    QSlider *slider;
+};
+
+#endif
+```
+
+* lcdrange.cpp
+```cpp
+/****************************************************************
+**
+** Qt tutorial 7  lcdrange.cpp
+**
+****************************************************************/
+#include "lcdrange.h"
+
+ LCDRange::LCDRange(QWidget *parent)
+     : QWidget(parent)
+ {
+     QLCDNumber *lcd = new QLCDNumber(2);
+     lcd->setSegmentStyle(QLCDNumber::Filled);
+
+     slider = new QSlider(Qt::Horizontal);
+     slider->setRange(0, 99);
+     slider->setValue(0);
+
+     connect(slider, SIGNAL(valueChanged(int)),
+             lcd, SLOT(display(int)));
+     connect(slider, SIGNAL(valueChanged(int)),
+             this, SIGNAL(valueChanged(int)));
+
+     QVBoxLayout *layout = new QVBoxLayout;
+     layout->addWidget(lcd);
+     layout->addWidget(slider);
+     setLayout(layout);
+
+     setFocusProxy(slider);
+ }
+
+ int LCDRange::value() const
+ {
+     return slider->value();
+ }
+
+ void LCDRange::setValue(int value)
+ {
+     slider->setValue(value);
+ }
+
+ void LCDRange::setRange(int minValue, int maxValue)
+ {
+     if (minValue < 0 || maxValue > 99 || minValue > maxValue) {
+         qWarning("LCDRange::setRange(%d, %d)\n"
+                  "\tRange must be 0..99\n"
+                  "\tand minValue must not be greater than maxValue",
+                  minValue, maxValue);
+         return;
+     }
+     slider->setRange(minValue, maxValue);
+ }
+
+
+```
+* main.cpp
+```cpp
+/****************************************************************
+**
+** Qt tutorial 7  lcdrange.h  lcdrange.cpp main.cpp
+**
+****************************************************************/
+#include <QApplication>
+#include <QFont>
+#include <QGridLayout>
+#include <QPushButton>
+#include <QWidget>
+
+#include "lcdrange.h"
+
+class MyWidget : public QWidget
+{
+public:
+    MyWidget(QWidget *parent = 0);
+};
+
+MyWidget::MyWidget(QWidget *parent)
+    : QWidget(parent)
+{
+    QPushButton *quit = new QPushButton(tr("Quit"));
+    quit->setFont(QFont("Times", 18, QFont::Bold));
+
+    connect(quit, SIGNAL(clicked()), qApp, SLOT(quit()));
+
+    QGridLayout *grid = new QGridLayout;
+    LCDRange *previousRange = 0;
+
+    for (int row = 0; row < 3; ++row) {
+        for (int column = 0; column < 3; ++column) {
+            LCDRange *lcdRange = new LCDRange;
+            grid->addWidget(lcdRange, row, column);
+            if (previousRange)
+                connect(lcdRange, SIGNAL(valueChanged(int)),
+                        previousRange, SLOT(setValue(int)));
+            previousRange = lcdRange;
+        }
+    }
+    QVBoxLayout *layout = new QVBoxLayout;
+    layout->addWidget(quit);
+    layout->addLayout(grid);
+    setLayout(layout);
+}
+
+int main(int argc, char *argv[])
+{
+    QApplication app(argc, argv);
+    MyWidget widget;
+    widget.show();
+    return app.exec();
+}
+```
+![alt text](images/6.PNG?raw=true "sortie de code")
+
+
+## 8 - Preparing for Battle
+ * cannonfield.h
+ ```cpp
+ /****************************************************************
+**
+** Qt tutorial 8  cannonfield.h
+**
+****************************************************************/
+#ifndef CANNONFIELD_H
+ #define CANNONFIELD_H
+
+ #include <QWidget>
+ #include <QPainter>
+ class CannonField : public QWidget
+ {
+     Q_OBJECT
+
+ public:
+     CannonField(QWidget *parent = 0);
+
+     int angle() const { return currentAngle; }
+
+ public slots:
+     void setAngle(int angle);
+
+ signals:
+     void angleChanged(int newAngle);
+
+ protected:
+     void paintEvent(QPaintEvent *event);
+
+ private:
+     int currentAngle;
+ };
+
+ #endif
+```
+ * cannonfield.cpp
+```cpp
+
+/****************************************************************
+**
+** Qt tutorial 8  cannonfield.cpp 
+**
+****************************************************************/
+ #include "cannonfield.h"
+ CannonField::CannonField(QWidget *parent)
+     : QWidget(parent)
+ {
+     currentAngle = 45;
+     setPalette(QPalette(QColor(250, 250, 200)));
+     setAutoFillBackground(true);
+ }
+
+ void CannonField::setAngle(int angle)
+ {
+     if (angle < 5)
+         angle = 5;
+     if (angle > 70)
+         angle = 70;
+     if (currentAngle == angle)
+         return;
+     currentAngle = angle;
+     update();
+     emit angleChanged(currentAngle);
+ }
+
+ void CannonField::paintEvent(QPaintEvent * /* event */)
+ {
+     QPainter painter(this);
+     painter.drawText(200, 200,
+                      tr("Angle = ") + QString::number(currentAngle));
+ }
+
+```
+```cpp
+
+/****************************************************************
+**
+** Qt tutorial 8  main.cpp 
+**
+****************************************************************/
+#include <QApplication>
+#include <QFont>
+#include <QGridLayout>
+#include <QPushButton>
+
+#include "cannonfield.h"
+#include "lcdrange.h"
+
+class MyWidget : public QWidget
+{
+public:
+    MyWidget(QWidget *parent = 0);
+};
+
+MyWidget::MyWidget(QWidget *parent)
+    : QWidget(parent)
+{
+    QPushButton *quit = new QPushButton(tr("Quit"));
+    quit->setFont(QFont("Times", 18, QFont::Bold));
+
+    connect(quit, SIGNAL(clicked()), qApp, SLOT(quit()));
+
+    LCDRange *angle = new LCDRange;
+    angle->setRange(5, 70);
+
+    CannonField *cannonField = new CannonField;
+
+    connect(angle, SIGNAL(valueChanged(int)),
+            cannonField, SLOT(setAngle(int)));
+    connect(cannonField, SIGNAL(angleChanged(int)),
+            angle, SLOT(setValue(int)));
+
+    QGridLayout *gridLayout = new QGridLayout;
+    gridLayout->addWidget(quit, 0, 0);
+    gridLayout->addWidget(angle, 1, 0);
+    gridLayout->addWidget(cannonField, 1, 1, 2, 1);
+    gridLayout->setColumnStretch(1, 10);
+    setLayout(gridLayout);
+
+    angle->setValue(60);
+    angle->setFocus();
+}
+
+int main(int argc, char *argv[])
+{
+    QApplication app(argc, argv);
+    MyWidget widget;
+    widget.setGeometry(100, 100, 500, 355);
+    widget.show();
+    return app.exec();
+}
+```
+![alt text](images/8.PNG?raw=true "sortie de code")
+![alt text](images/tutorial8-layout.png?raw=true "sortie de code")
+
+
+
+

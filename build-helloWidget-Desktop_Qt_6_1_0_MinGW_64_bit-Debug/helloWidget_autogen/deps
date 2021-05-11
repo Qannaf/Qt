@@ -1,82 +1,28 @@
 helloWidget_autogen/timestamp: \
-	C:/Program\ Files/CMake/share/cmake-3.19/Modules/CMakeCXXCompiler.cmake.in \
-	C:/Program\ Files/CMake/share/cmake-3.19/Modules/CMakeCXXCompilerABI.cpp \
 	C:/Program\ Files/CMake/share/cmake-3.19/Modules/CMakeCXXInformation.cmake \
 	C:/Program\ Files/CMake/share/cmake-3.19/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake \
 	C:/Program\ Files/CMake/share/cmake-3.19/Modules/CMakeCommonLanguageInclude.cmake \
-	C:/Program\ Files/CMake/share/cmake-3.19/Modules/CMakeCompilerIdDetection.cmake \
-	C:/Program\ Files/CMake/share/cmake-3.19/Modules/CMakeDetermineCXXCompiler.cmake \
-	C:/Program\ Files/CMake/share/cmake-3.19/Modules/CMakeDetermineCompileFeatures.cmake \
-	C:/Program\ Files/CMake/share/cmake-3.19/Modules/CMakeDetermineCompiler.cmake \
-	C:/Program\ Files/CMake/share/cmake-3.19/Modules/CMakeDetermineCompilerABI.cmake \
-	C:/Program\ Files/CMake/share/cmake-3.19/Modules/CMakeDetermineCompilerId.cmake \
-	C:/Program\ Files/CMake/share/cmake-3.19/Modules/CMakeDetermineRCCompiler.cmake \
-	C:/Program\ Files/CMake/share/cmake-3.19/Modules/CMakeDetermineSystem.cmake \
-	C:/Program\ Files/CMake/share/cmake-3.19/Modules/CMakeFindBinUtils.cmake \
 	C:/Program\ Files/CMake/share/cmake-3.19/Modules/CMakeFindDependencyMacro.cmake \
 	C:/Program\ Files/CMake/share/cmake-3.19/Modules/CMakeGenericSystem.cmake \
 	C:/Program\ Files/CMake/share/cmake-3.19/Modules/CMakeInitializeConfigs.cmake \
 	C:/Program\ Files/CMake/share/cmake-3.19/Modules/CMakeLanguageInformation.cmake \
-	C:/Program\ Files/CMake/share/cmake-3.19/Modules/CMakeNinjaFindMake.cmake \
 	C:/Program\ Files/CMake/share/cmake-3.19/Modules/CMakeParseArguments.cmake \
-	C:/Program\ Files/CMake/share/cmake-3.19/Modules/CMakeParseImplicitIncludeInfo.cmake \
-	C:/Program\ Files/CMake/share/cmake-3.19/Modules/CMakeParseImplicitLinkInfo.cmake \
-	C:/Program\ Files/CMake/share/cmake-3.19/Modules/CMakeRCCompiler.cmake.in \
 	C:/Program\ Files/CMake/share/cmake-3.19/Modules/CMakeRCInformation.cmake \
-	C:/Program\ Files/CMake/share/cmake-3.19/Modules/CMakeSystem.cmake.in \
 	C:/Program\ Files/CMake/share/cmake-3.19/Modules/CMakeSystemSpecificInformation.cmake \
 	C:/Program\ Files/CMake/share/cmake-3.19/Modules/CMakeSystemSpecificInitialize.cmake \
-	C:/Program\ Files/CMake/share/cmake-3.19/Modules/CMakeTestCXXCompiler.cmake \
-	C:/Program\ Files/CMake/share/cmake-3.19/Modules/CMakeTestCompilerCommon.cmake \
-	C:/Program\ Files/CMake/share/cmake-3.19/Modules/CMakeTestRCCompiler.cmake \
 	C:/Program\ Files/CMake/share/cmake-3.19/Modules/CheckCXXCompilerFlag.cmake \
 	C:/Program\ Files/CMake/share/cmake-3.19/Modules/CheckCXXSourceCompiles.cmake \
-	C:/Program\ Files/CMake/share/cmake-3.19/Modules/CheckIncludeFile.cxx.in \
 	C:/Program\ Files/CMake/share/cmake-3.19/Modules/CheckIncludeFileCXX.cmake \
 	C:/Program\ Files/CMake/share/cmake-3.19/Modules/CheckLibraryExists.cmake \
-	C:/Program\ Files/CMake/share/cmake-3.19/Modules/Compiler/ADSP-DetermineCompiler.cmake \
-	C:/Program\ Files/CMake/share/cmake-3.19/Modules/Compiler/ARMCC-DetermineCompiler.cmake \
-	C:/Program\ Files/CMake/share/cmake-3.19/Modules/Compiler/ARMClang-DetermineCompiler.cmake \
-	C:/Program\ Files/CMake/share/cmake-3.19/Modules/Compiler/AppleClang-DetermineCompiler.cmake \
-	C:/Program\ Files/CMake/share/cmake-3.19/Modules/Compiler/Borland-DetermineCompiler.cmake \
 	C:/Program\ Files/CMake/share/cmake-3.19/Modules/Compiler/CMakeCommonCompilerMacros.cmake \
-	C:/Program\ Files/CMake/share/cmake-3.19/Modules/Compiler/Clang-DetermineCompiler.cmake \
-	C:/Program\ Files/CMake/share/cmake-3.19/Modules/Compiler/Clang-DetermineCompilerInternal.cmake \
-	C:/Program\ Files/CMake/share/cmake-3.19/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake \
-	C:/Program\ Files/CMake/share/cmake-3.19/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake \
-	C:/Program\ Files/CMake/share/cmake-3.19/Modules/Compiler/Cray-DetermineCompiler.cmake \
-	C:/Program\ Files/CMake/share/cmake-3.19/Modules/Compiler/Embarcadero-DetermineCompiler.cmake \
-	C:/Program\ Files/CMake/share/cmake-3.19/Modules/Compiler/Fujitsu-DetermineCompiler.cmake \
-	C:/Program\ Files/CMake/share/cmake-3.19/Modules/Compiler/GHS-DetermineCompiler.cmake \
-	C:/Program\ Files/CMake/share/cmake-3.19/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake \
 	C:/Program\ Files/CMake/share/cmake-3.19/Modules/Compiler/GNU-CXX.cmake \
-	C:/Program\ Files/CMake/share/cmake-3.19/Modules/Compiler/GNU-FindBinUtils.cmake \
 	C:/Program\ Files/CMake/share/cmake-3.19/Modules/Compiler/GNU.cmake \
-	C:/Program\ Files/CMake/share/cmake-3.19/Modules/Compiler/HP-CXX-DetermineCompiler.cmake \
-	C:/Program\ Files/CMake/share/cmake-3.19/Modules/Compiler/IAR-DetermineCompiler.cmake \
-	C:/Program\ Files/CMake/share/cmake-3.19/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake \
-	C:/Program\ Files/CMake/share/cmake-3.19/Modules/Compiler/Intel-DetermineCompiler.cmake \
-	C:/Program\ Files/CMake/share/cmake-3.19/Modules/Compiler/MSVC-DetermineCompiler.cmake \
-	C:/Program\ Files/CMake/share/cmake-3.19/Modules/Compiler/NVIDIA-DetermineCompiler.cmake \
-	C:/Program\ Files/CMake/share/cmake-3.19/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake \
-	C:/Program\ Files/CMake/share/cmake-3.19/Modules/Compiler/PGI-DetermineCompiler.cmake \
-	C:/Program\ Files/CMake/share/cmake-3.19/Modules/Compiler/PathScale-DetermineCompiler.cmake \
-	C:/Program\ Files/CMake/share/cmake-3.19/Modules/Compiler/SCO-DetermineCompiler.cmake \
-	C:/Program\ Files/CMake/share/cmake-3.19/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake \
-	C:/Program\ Files/CMake/share/cmake-3.19/Modules/Compiler/TI-DetermineCompiler.cmake \
-	C:/Program\ Files/CMake/share/cmake-3.19/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake \
-	C:/Program\ Files/CMake/share/cmake-3.19/Modules/Compiler/Watcom-DetermineCompiler.cmake \
-	C:/Program\ Files/CMake/share/cmake-3.19/Modules/Compiler/XL-CXX-DetermineCompiler.cmake \
-	C:/Program\ Files/CMake/share/cmake-3.19/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake \
-	C:/Program\ Files/CMake/share/cmake-3.19/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake \
 	C:/Program\ Files/CMake/share/cmake-3.19/Modules/FindPackageHandleStandardArgs.cmake \
 	C:/Program\ Files/CMake/share/cmake-3.19/Modules/FindPackageMessage.cmake \
 	C:/Program\ Files/CMake/share/cmake-3.19/Modules/FindThreads.cmake \
 	C:/Program\ Files/CMake/share/cmake-3.19/Modules/FindVulkan.cmake \
 	C:/Program\ Files/CMake/share/cmake-3.19/Modules/Internal/CheckCompilerFlag.cmake \
 	C:/Program\ Files/CMake/share/cmake-3.19/Modules/Internal/CheckSourceCompiles.cmake \
-	C:/Program\ Files/CMake/share/cmake-3.19/Modules/Internal/FeatureTesting.cmake \
-	C:/Program\ Files/CMake/share/cmake-3.19/Modules/Platform/Windows-Determine-CXX.cmake \
 	C:/Program\ Files/CMake/share/cmake-3.19/Modules/Platform/Windows-GNU-CXX-ABI.cmake \
 	C:/Program\ Files/CMake/share/cmake-3.19/Modules/Platform/Windows-GNU-CXX.cmake \
 	C:/Program\ Files/CMake/share/cmake-3.19/Modules/Platform/Windows-GNU.cmake \
@@ -152,6 +98,7 @@ helloWidget_autogen/timestamp: \
 	C:/Qt6.1.0/6.1.0/mingw81_64/include/QtCore/qutf8stringview.h \
 	C:/Qt6.1.0/6.1.0/mingw81_64/include/QtCore/qvarlengtharray.h \
 	C:/Qt6.1.0/6.1.0/mingw81_64/include/QtCore/qversiontagging.h \
+	C:/Qt6.1.0/6.1.0/mingw81_64/include/QtGui/QPainter \
 	C:/Qt6.1.0/6.1.0/mingw81_64/include/QtGui/qbitmap.h \
 	C:/Qt6.1.0/6.1.0/mingw81_64/include/QtGui/qbrush.h \
 	C:/Qt6.1.0/6.1.0/mingw81_64/include/QtGui/qcolor.h \
@@ -163,21 +110,36 @@ helloWidget_autogen/timestamp: \
 	C:/Qt6.1.0/6.1.0/mingw81_64/include/QtGui/qimage.h \
 	C:/Qt6.1.0/6.1.0/mingw81_64/include/QtGui/qkeysequence.h \
 	C:/Qt6.1.0/6.1.0/mingw81_64/include/QtGui/qpaintdevice.h \
+	C:/Qt6.1.0/6.1.0/mingw81_64/include/QtGui/qpainter.h \
 	C:/Qt6.1.0/6.1.0/mingw81_64/include/QtGui/qpalette.h \
+	C:/Qt6.1.0/6.1.0/mingw81_64/include/QtGui/qpen.h \
 	C:/Qt6.1.0/6.1.0/mingw81_64/include/QtGui/qpixelformat.h \
 	C:/Qt6.1.0/6.1.0/mingw81_64/include/QtGui/qpixmap.h \
 	C:/Qt6.1.0/6.1.0/mingw81_64/include/QtGui/qpolygon.h \
 	C:/Qt6.1.0/6.1.0/mingw81_64/include/QtGui/qregion.h \
 	C:/Qt6.1.0/6.1.0/mingw81_64/include/QtGui/qrgb.h \
 	C:/Qt6.1.0/6.1.0/mingw81_64/include/QtGui/qrgba64.h \
+	C:/Qt6.1.0/6.1.0/mingw81_64/include/QtGui/qtextoption.h \
 	C:/Qt6.1.0/6.1.0/mingw81_64/include/QtGui/qtgui-config.h \
 	C:/Qt6.1.0/6.1.0/mingw81_64/include/QtGui/qtguiglobal.h \
 	C:/Qt6.1.0/6.1.0/mingw81_64/include/QtGui/qtransform.h \
 	C:/Qt6.1.0/6.1.0/mingw81_64/include/QtGui/qwindowdefs.h \
 	C:/Qt6.1.0/6.1.0/mingw81_64/include/QtGui/qwindowdefs_win.h \
+	C:/Qt6.1.0/6.1.0/mingw81_64/include/QtWidgets/QLCDNumber \
 	C:/Qt6.1.0/6.1.0/mingw81_64/include/QtWidgets/QMainWindow \
+	C:/Qt6.1.0/6.1.0/mingw81_64/include/QtWidgets/QSlider \
+	C:/Qt6.1.0/6.1.0/mingw81_64/include/QtWidgets/QVBoxLayout \
+	C:/Qt6.1.0/6.1.0/mingw81_64/include/QtWidgets/QWidget \
+	C:/Qt6.1.0/6.1.0/mingw81_64/include/QtWidgets/qabstractslider.h \
+	C:/Qt6.1.0/6.1.0/mingw81_64/include/QtWidgets/qboxlayout.h \
+	C:/Qt6.1.0/6.1.0/mingw81_64/include/QtWidgets/qframe.h \
+	C:/Qt6.1.0/6.1.0/mingw81_64/include/QtWidgets/qgridlayout.h \
+	C:/Qt6.1.0/6.1.0/mingw81_64/include/QtWidgets/qlayout.h \
+	C:/Qt6.1.0/6.1.0/mingw81_64/include/QtWidgets/qlayoutitem.h \
+	C:/Qt6.1.0/6.1.0/mingw81_64/include/QtWidgets/qlcdnumber.h \
 	C:/Qt6.1.0/6.1.0/mingw81_64/include/QtWidgets/qmainwindow.h \
 	C:/Qt6.1.0/6.1.0/mingw81_64/include/QtWidgets/qsizepolicy.h \
+	C:/Qt6.1.0/6.1.0/mingw81_64/include/QtWidgets/qslider.h \
 	C:/Qt6.1.0/6.1.0/mingw81_64/include/QtWidgets/qtabwidget.h \
 	C:/Qt6.1.0/6.1.0/mingw81_64/include/QtWidgets/qtwidgets-config.h \
 	C:/Qt6.1.0/6.1.0/mingw81_64/include/QtWidgets/qtwidgetsglobal.h \
@@ -437,6 +399,8 @@ helloWidget_autogen/timestamp: \
 	G:/Utilisateurs/qannaf.as/Desktop/Qannaf/qt/build-helloWidget-Desktop_Qt_6_1_0_MinGW_64_bit-Debug/CMakeFiles/3.19.2/CMakeSystem.cmake \
 	G:/Utilisateurs/qannaf.as/Desktop/Qannaf/qt/build-helloWidget-Desktop_Qt_6_1_0_MinGW_64_bit-Debug/helloWidget_autogen/moc_predefs.h \
 	G:/Utilisateurs/qannaf.as/Desktop/Qannaf/qt/helloWidget/CMakeLists.txt \
+	G:/Utilisateurs/qannaf.as/Desktop/Qannaf/qt/helloWidget/cannonfield.h \
+	G:/Utilisateurs/qannaf.as/Desktop/Qannaf/qt/helloWidget/lcdrange.h \
 	G:/Utilisateurs/qannaf.as/Desktop/Qannaf/qt/helloWidget/mainwindow.h \
 	G:/Utilisateurs/qannaf.as/Desktop/Qannaf/qt/helloWidget/mainwindow.ui \
 	C:/Program\ Files/CMake/bin/cmake.exe

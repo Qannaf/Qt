@@ -32,6 +32,12 @@ set(PROJECT_SOURCES
         mainwindow.cpp
         mainwindow.h
         mainwindow.ui
+		# tutorial 7
+            lcdrange.h
+            lcdrange.cpp
+		#tutorial 7
+            cannonfield.h
+            cannonfield.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
