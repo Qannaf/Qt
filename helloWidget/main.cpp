@@ -3,18 +3,18 @@
 ** Qt tutorial 1.a
 **
 ****************************************************************/
-/*#include <qapplication.h>
-#include <qpushbutton.h>
+/*#include <QApplication>
+#include <QPushButton>
 
-
-int main( int argc, char **argv )
+int main(int argc, char *argv[])
 {
-    QApplication a( argc, argv );
-    QPushButton hello( "Hello world!", 0 );
-hello.resize( 100, 30 );
-    a.setActiveWindow(&hello);
+    QApplication app(argc, argv);
+
+    QPushButton hello("Hello world!");
+    hello.resize(100, 30);
+
     hello.show();
-    return a.exec();
+    return app.exec();
 }
 //*/
 
@@ -23,17 +23,18 @@ hello.resize( 100, 30 );
 ** Qt tutorial 1.b
 **
 ****************************************************************/
-/*#include <qapplication.h>
-#include <qpushbutton.h>
+/*#include <QApplication>
+#include <QPushButton>
 
-int main( int argc, char **argv )
+int main(int argc, char *argv[])
 {
-    QApplication a( argc, argv );
+    QApplication app(argc, argv);
+
     QPushButton *hello (new QPushButton( "Hello world!"));
-   hello->resize( 100, 30 );
-    a.setActiveWindow(hello);
+    hello->resize(100, 30);
+
     hello->show();
-    return a.exec();
+    return app.exec();
 }
 //*/
 
@@ -43,21 +44,22 @@ int main( int argc, char **argv )
 ** Qt tutorial 2
 **
 ****************************************************************/
-/*#include <qapplication.h>
-#include <qpushbutton.h>
-#include <qfont.h>
+/*#include <QApplication>
+#include <QFont>
+#include <QPushButton>
 
-
-int main( int argc, char **argv )
+int main(int argc, char *argv[])
 {
-    QApplication a( argc, argv );
-    QPushButton quit( "Quit", 0 );
-    quit.resize( 75, 30 );
-    quit.setFont( QFont( "Times", 18, QFont::Bold ) );
-    QObject::connect( &quit, SIGNAL(clicked()), &a, SLOT(quit()) );
-    a.setActiveWindow( &quit );
+    QApplication app(argc, argv);
+
+    QPushButton quit("Quit");
+    quit.resize(75, 30);
+    quit.setFont(QFont("Times", 18, QFont::Bold));
+
+    QObject::connect(&quit, SIGNAL(clicked()), &app, SLOT(quit()));
+
     quit.show();
-    return a.exec();
+    return app.exec();
 }
 //*/
 
@@ -67,22 +69,25 @@ int main( int argc, char **argv )
 **
 ****************************************************************/
 /*
-#include <qapplication.h>
-#include <qpushbutton.h>
-#include <qfont.h>
-#include <QVBoxLayout>
+#include <QApplication>
+#include <QFont>
+#include <QPushButton>
+#include <QWidget>
 
-int main( int argc, char **argv )
+int main(int argc, char *argv[])
 {
-    QApplication a( argc, argv );
-    QWidget box;
-    box.resize( 200, 120 );
-    QPushButton quit( "Quit", &box );
-    quit.setFont( QFont( "Times", 18, QFont::Bold ) );
-    QObject::connect( &quit, SIGNAL(clicked()), &a, SLOT(quit()) );
-    a.setActiveWindow( &box );
-    box.show();
-    return a.exec();
+    QApplication app(argc, argv);
+
+    QWidget window;
+    window.resize(200, 120);
+
+    QPushButton quit("Quit", &window);
+    quit.setFont(QFont("Times", 18, QFont::Bold));
+    quit.setGeometry(10, 40, 180, 40);
+    QObject::connect(&quit, SIGNAL(clicked()), &app, SLOT(quit()));
+
+    window.show();
+    return app.exec();
 }
 //*/
 /****************************************************************
@@ -96,15 +101,13 @@ int main( int argc, char **argv )
 #include <QPushButton>
 #include <QWidget>
 
-// Prototype of class
 class MyWidget : public QWidget
 {
 public:
     MyWidget(QWidget *parent = 0);
 };
 
-
-MyWidget::MyWidget(QWidget *parent )
+MyWidget::MyWidget(QWidget *parent)
     : QWidget(parent)
 {
     setFixedSize(200, 120);
@@ -118,12 +121,10 @@ MyWidget::MyWidget(QWidget *parent )
 
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
+    QApplication app(argc, argv);
     MyWidget widget;
-    widget.setGeometry( 100, 100, 200, 120 );
-    a.setActiveWindow( &widget );
     widget.show();
-    return a.exec();
+    return app.exec();
 }//*/
 
 
@@ -133,7 +134,7 @@ int main(int argc, char *argv[])
 ** Qt tutorial 5
 **
 ****************************************************************/
-
+/*
 #include <QApplication>
 #include <QFont>
 #include <QLCDNumber>
@@ -180,3 +181,79 @@ int main(int argc, char *argv[])
     widget.show();
     return app.exec();
 }
+//*/
+
+
+/****************************************************************
+**
+** Qt tutorial 6
+**
+****************************************************************/
+
+#include <QApplication>
+ #include <QFont>
+ #include <QGridLayout>
+ #include <QLCDNumber>
+ #include <QPushButton>
+ #include <QSlider>
+ #include <QVBoxLayout>
+ #include <QWidget>
+
+ class LCDRange : public QWidget
+ {
+ public:
+     LCDRange(QWidget *parent = 0);
+ };
+
+ LCDRange::LCDRange(QWidget *parent)
+     : QWidget(parent)
+ {
+     QLCDNumber *lcd = new QLCDNumber(2);
+     lcd->setSegmentStyle(QLCDNumber::Filled);
+
+     QSlider *slider = new QSlider(Qt::Horizontal);
+     slider->setRange(0, 99);
+     slider->setValue(0);
+     connect(slider, SIGNAL(valueChanged(int)),
+             lcd, SLOT(display(int)));
+
+     QVBoxLayout *layout = new QVBoxLayout;
+     layout->addWidget(lcd);
+     layout->addWidget(slider);
+     setLayout(layout);
+ }
+
+ class MyWidget : public QWidget
+ {
+ public:
+     MyWidget(QWidget *parent = 0);
+ };
+
+ MyWidget::MyWidget(QWidget *parent)
+     : QWidget(parent)
+ {
+     QPushButton *quit = new QPushButton(tr("Quit"));
+     quit->setFont(QFont("Times", 18, QFont::Bold));
+     connect(quit, SIGNAL(clicked()), qApp, SLOT(quit()));
+
+     QGridLayout *grid = new QGridLayout;
+     for (int row = 0; row < 3; ++row) {
+         for (int column = 0; column < 3; ++column) {
+             LCDRange *lcdRange = new LCDRange;
+             grid->addWidget(lcdRange, row, column);
+         }
+     }
+
+     QVBoxLayout *layout = new QVBoxLayout;
+     layout->addWidget(quit);
+     layout->addLayout(grid);
+     setLayout(layout);
+ }
+
+ int main(int argc, char *argv[])
+ {
+     QApplication app(argc, argv);
+     MyWidget widget;
+     widget.show();
+     return app.exec();
+ }

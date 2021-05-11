@@ -11,18 +11,18 @@
 ** Qt tutorial 1
 **
 ****************************************************************/
-#include <qapplication.h>
-#include <qpushbutton.h>
+#include <QApplication>
+#include <QPushButton>
 
-
-int main( int argc, char **argv )
+int main(int argc, char *argv[])
 {
-    QApplication a( argc, argv );
-    QPushButton hello( "Hello world!", 0 );
-    hello.resize( 100, 30 );
-    a.setActiveWindow(&hello);
+    QApplication app(argc, argv);
+
+    QPushButton hello("Hello world!");
+    hello.resize(100, 30);
+
     hello.show();
-    return a.exec();
+    return app.exec();
 }
 ```
 ![alt text](images/1.PNG?raw=true "sortie de code")
@@ -34,18 +34,18 @@ int main( int argc, char **argv )
 ** Qt tutorial 1.b
 **
 ****************************************************************/
-#include <qapplication.h>
-#include <qpushbutton.h>
-#
+#include <QApplication>
+#include <QPushButton>
 
-int main( int argc, char **argv )
+int main(int argc, char *argv[])
 {
-    QApplication a( argc, argv );
+    QApplication app(argc, argv);
+
     QPushButton *hello (new QPushButton( "Hello world!"));
-    hello->resize( 100, 30 );
-    a.setActiveWindow(hello);
+    hello->resize(100, 30);
+
     hello->show();
-    return a.exec();
+    return app.exec();
 }
 ```
 ![alt text](images/1.PNG?raw=true "sortie de code")
@@ -57,21 +57,22 @@ int main( int argc, char **argv )
 ** Qt tutorial 2
 **
 ****************************************************************/
-#include <qapplication.h>
-#include <qpushbutton.h>
-#include <qfont.h>
+#include <QApplication>
+#include <QFont>
+#include <QPushButton>
 
-
-int main( int argc, char **argv )
+int main(int argc, char *argv[])
 {
-    QApplication a( argc, argv );
-    QPushButton quit( "Quit", 0 );
-    quit.resize( 75, 30 );
-    quit.setFont( QFont( "Times", 18, QFont::Bold ) );
-    QObject::connect( &quit, SIGNAL(clicked()), &a, SLOT(quit()) );
-    a.setActiveWindow( &quit );
+    QApplication app(argc, argv);
+
+    QPushButton quit("Quit");
+    quit.resize(75, 30);
+    quit.setFont(QFont("Times", 18, QFont::Bold));
+
+    QObject::connect(&quit, SIGNAL(clicked()), &app, SLOT(quit()));
+
     quit.show();
-    return a.exec();
+    return app.exec();
 }
 ```
 ![alt text](images/2.PNG?raw=true "sortie de code")
@@ -83,23 +84,25 @@ int main( int argc, char **argv )
 ** Qt tutorial 3
 **
 ****************************************************************/
+#include <QApplication>
+#include <QFont>
+#include <QPushButton>
+#include <QWidget>
 
-#include <qapplication.h>
-#include <qpushbutton.h>
-#include <qfont.h>
-#include <QVBoxLayout>
-
-int main( int argc, char **argv )
+int main(int argc, char *argv[])
 {
-    QApplication a( argc, argv );
-    QWidget box;
-    box.resize( 200, 120 );
-    QPushButton quit( "Quit", &box );
-    quit.setFont( QFont( "Times", 18, QFont::Bold ) );
-    QObject::connect( &quit, SIGNAL(clicked()), &a, SLOT(quit()) );
-    a.setActiveWindow( &box );
-    box.show();
-    return a.exec();
+    QApplication app(argc, argv);
+
+    QWidget window;
+    window.resize(200, 120);
+
+    QPushButton quit("Quit", &window);
+    quit.setFont(QFont("Times", 18, QFont::Bold));
+    quit.setGeometry(10, 40, 180, 40);
+    QObject::connect(&quit, SIGNAL(clicked()), &app, SLOT(quit()));
+
+    window.show();
+    return app.exec();
 }
 ```
 ![alt text](images/3.PNG?raw=true "sortie de code")
