@@ -60,3 +60,8 @@
 937	3235	6424441509679117	CMakeFiles/helloWidget.dir/helloWidget_autogen/mocs_compilation.cpp.obj	e6838dcc3e2885d
 942	3459	6424441511903188	CMakeFiles/helloWidget.dir/main.cpp.obj	4667aecd015df525
 3459	4112	6424441518026640	helloWidget.exe	1c9a0a2d114515e3
+8	736	6424447941683312	helloWidget_autogen/timestamp	759ceb63cc5d732a
+736	2996	6424447964292813	CMakeFiles/helloWidget.dir/helloWidget_autogen/mocs_compilation.cpp.obj	e6838dcc3e2885d
+757	3013	6424447964482306	CMakeFiles/helloWidget.dir/cannonfield.cpp.obj	d701502d31366a62
+747	3160	6424447965838713	CMakeFiles/helloWidget.dir/main.cpp.obj	4667aecd015df525
+3160	3800	6424447971922409	helloWidget.exe	1c9a0a2d114515e3

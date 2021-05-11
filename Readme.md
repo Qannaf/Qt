@@ -519,6 +519,8 @@ int main(int argc, char *argv[])
  }
 
 ```
+ 
+ * Main.cpp
 ```cpp
 
 /****************************************************************
@@ -580,6 +582,30 @@ int main(int argc, char *argv[])
 ```
 ![alt text](images/8.PNG?raw=true "sortie de code")
 ![alt text](images/tutorial8-layout.png?raw=true "sortie de code")
+
+
+
+## 9 - With Cannon You Can
+modified function paintEvent in cannonfield.cpp
+``` cpp
+void CannonField::paintEvent(QPaintEvent * /* event */)
+ {
+     QPainter painter(this);
+     painter.drawText(200, 200,
+                      tr("Angle = ") + QString::number(currentAngle));
+
+
+     // tuto 9 
+     painter.setPen(Qt::NoPen);
+     painter.setBrush(Qt::blue);
+
+     painter.translate(0, rect().height());
+     painter.drawPie(QRect(-35, -35, 70, 70), 0, 90 * 16);
+     painter.rotate(-currentAngle);
+     painter.drawRect(QRect(30, -5, 20, 10));
+ }
+```
+![alt text](images/9.PNG?raw=true "sortie de code")
 
 
 

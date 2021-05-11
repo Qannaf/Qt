@@ -1,5 +1,9 @@
 
-
+/****************************************************************
+**
+** Qt tutorial 8  cannonfield.cpp
+**
+****************************************************************/
  #include "cannonfield.h"
 
  CannonField::CannonField(QWidget *parent)
@@ -28,4 +32,17 @@
      QPainter painter(this);
      painter.drawText(200, 200,
                       tr("Angle = ") + QString::number(currentAngle));
+
+
+     // tuto 9
+     painter.setPen(Qt::NoPen);
+     painter.setBrush(Qt::blue);
+
+     painter.translate(0, rect().height());
+     painter.drawPie(QRect(-35, -35, 70, 70), 0, 90 * 16);
+     painter.rotate(-currentAngle);
+     painter.drawRect(QRect(30, -5, 20, 10));
  }
+
+
+
