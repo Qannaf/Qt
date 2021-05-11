@@ -1,0 +1,7 @@
+# ninja log v5
+2	296	6424305130990804	helloWorld_autogen/timestamp	ecb08a6e9b5632e3
+297	514	6424305133125106	CMakeFiles/helloWorld.dir/helloWorld_autogen/mocs_compilation.cpp.obj	23cca71ada15aba
+303	2272	6424305150708076	CMakeFiles/helloWorld.dir/main.cpp.obj	776d921825c9406c
+2275	2754	6424305155295806	helloWorld.exe	92839d7e80dcd387
+7	2111	6424307174258376	CMakeFiles/helloWorld.dir/main.cpp.obj	776d921825c9406c
+2111	2781	6424307180770960	helloWorld.exe	92839d7e80dcd387
