@@ -800,6 +800,7 @@ void CannonField::paintEvent(QPaintEvent * /* event */)
 ##12 - Facing the Wall
 Look helloWidget folder
 
+![alt text](images/f.PNG?raw=true "sortie de code")
 
 
 
