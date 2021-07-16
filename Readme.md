@@ -804,4 +804,9 @@ Look helloWidget folder
 
 
 
+For more of Qt5 tutorial visit this website
+ http://zetcode.com/gui/qt5/
+
+
+
 
